@@ -17,10 +17,13 @@ function YourAge(date_of_year) {
   return function (firstName) {
     age = 2020 - date_of_year;
 
-    console.log(`${firstName} ${welcome_msg} Your age is : ${age} `);
+    return function (yourFatherName) {
+      console.log(
+        `${firstName} son of ${yourFatherName} ${welcome_msg} Your age is : ${age} `
+      );
+    };
   };
 }
 
-var myage = YourAge(1991);
-myage("Muhammad Rehman");
-YourAge(1980)("Juanid Armani");
+YourAge(1970)("Muhammad Rehman")("Arshad Jamil");
+YourAge(1980)("Subhan Khan")("Afsar Khan");
